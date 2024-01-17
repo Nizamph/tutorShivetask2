@@ -30,11 +30,7 @@ app.post('/api/submitForm', async (req, res) => {
 });
 app.get('/api/getForm', async (req, res) => {
   try {
-    if (Object.keys(globalValue).length > 0) {
-      res.status(201).json({ formValue: globalValue });
-    } else {
-      res.status(501).json({ error: 'something went wrong' });
-    }
+    res.status(201).json({ formValue: globalValue });
   } catch (err) {
     console.log(err);
   }
