@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+
 app.use(cors());
-const PORT = 4000;
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -35,6 +35,7 @@ app.get('/api/getForm', async (req, res) => {
     console.log(err);
   }
 });
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`server is running on PORT ${PORT}`);
 });
